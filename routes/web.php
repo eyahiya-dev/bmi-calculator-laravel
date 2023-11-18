@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\BmiCalculateController;
+use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +15,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
+// Home route
+Route::get('/', [HomeController::class, 'index'])->name('home');
+
+// BMI Calculate Route
+Route::post('/bmi',[BmiCalculateController::class,'bmi'])->name('calculateBMI');

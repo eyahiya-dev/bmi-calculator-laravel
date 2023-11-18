@@ -9,7 +9,8 @@
 <body>
     <div class="flex h-screen justify-center items-center bg-black">
         <div class="w-full max-w-sm p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-6 md:p-8 dark:bg-gray-800 dark:border-gray-700">
-            <form class="space-y-6" action="#">
+            <form class="space-y-6" action="{{ route('calculateBMI') }}" method="POST">
+                @csrf
                 <h5 class="text-2xl mb-10 text-center font-medium text-gray-900 dark:text-white">Check Your BMI</h5>
                 <div class="text-center">
                     <label for="age" class="block mb-2 text-xl font-medium text-gray-900 dark:text-white">Age</label>
@@ -17,12 +18,12 @@
                 </div>
                 <div class="flex justify-between text-center">
                     <div>
-                        <label for="height" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Height (cm)</label>
-                        <input type="number" name="height" id="height" placeholder="Enter Height" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 w-32 text-center p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" required>
+                        <label for="height" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Height (m)</label>
+                        <input type="text" name="height" id="height" placeholder="Enter Height" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 w-32 text-center p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" required>
                     </div>
                     <div>
                         <label for="weight" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Weight (kg)</label>
-                        <input type="number" name="weight" id="weight" placeholder="Enter Weight" class="bg-gray-50 border text-center border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 w-32 p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" required>
+                        <input type="text" name="weight" id="weight" placeholder="Enter Weight" class="bg-gray-50 border text-center border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 w-32 p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" required>
                     </div>
                 </div>
                 <div class="flex justify-center">
