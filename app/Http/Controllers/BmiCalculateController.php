@@ -14,6 +14,9 @@ class BmiCalculateController extends Controller
         $result = $weight / ($height * $height);
         $bmi = round($result, 2);
 
+
+        // check and output the answer of calculation
+
         if($bmi < 16 ){
             return "Severe Thinness and your BMI is : {$bmi}";
         }elseif($bmi >= 16 && $bmi < 17){
