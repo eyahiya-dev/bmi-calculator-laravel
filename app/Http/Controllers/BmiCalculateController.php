@@ -34,4 +34,5 @@ class BmiCalculateController extends Controller
 
     // instruction for me
     // result showing page should build and manage as soon as possible ***
+    // build result showing page.
 }
