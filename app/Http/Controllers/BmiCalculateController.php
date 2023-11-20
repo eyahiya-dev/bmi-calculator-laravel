@@ -31,4 +31,7 @@ class BmiCalculateController extends Controller
             return "Obese and your BMI is : {$bmi}";
         }
     }
+
+    // instruction for me
+    // result showing page should build and manage as soon as possible ***
 }
