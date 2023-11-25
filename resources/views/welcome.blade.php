@@ -7,7 +7,7 @@
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
-//bmi calculator front end start
+{-- bmi calculator front end start --}
     <div class="flex h-screen justify-center items-center bg-black">
         <div class="w-full max-w-sm p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-6 md:p-8 dark:bg-gray-800 dark:border-gray-700">
             <form class="space-y-6" action="{{ route('calculateBMI') }}" method="POST">
